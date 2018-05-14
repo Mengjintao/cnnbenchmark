@@ -39,7 +39,7 @@ To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Ser
 |[mobilenet]    | 211  | 166  | 146  | 139 | 137 | 153  | 184 |     4.03 |
 |[densenet-121] | 865  | 593  | 438	 | 373 | 354 | 655  | 856 |  3.08|
 
-`speedup` is caculated with the minimum time usage of a given tool divided by the minimum time usage of FeatherCNN over all cores.
+`speedup` is caculated with the minimum time usage of the given tool divided by the minimum time usage of FeatherCNN over all cores.
 
 #### 1.3 Caffe2 + Eigen 
 
@@ -88,8 +88,8 @@ As ARM has a unique big.little archtecture for energy saving, to evaluate the ad
 #### 2.4 NCNN
 |Network| 1 | 2  |1  | 2 | 4 | all  | speedup |
 |---|---:|---:|---:|---:|---:|---:|---|
-|[VGG16]        | 2498 | 1976 | 5638 | 3465 |	2264 | 1627 | 0.84 |
-|[GoogleNet]    | 483	 | 277	|1429  |	762	| 433	 | 465	|1.11  |
+|[VGG16]        | 2498 | 1976 | 5638 | 3465 |	2264 | 1627 | 1.22 |
+|[GoogleNet]    | 483	 | 277	|1429  |  762	| 433	 | 465	|1.11  |
 |[Resnet-50]    | 1784 | 974	| 6728 | 3489	| 1905 | 1403	|1.88  |
 |[squeezenet]   | 403  |263	  |1130	 |598	  |373	 | 363	|1.82  | 
 |[mobilenet]    | 335	 |192	  |1250	 |663	  | 378	 |330	  |2.41  |  
