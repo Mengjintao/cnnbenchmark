@@ -14,9 +14,8 @@ We evaluate performance with VGG16, GoogleNet(Inception-V1), ResNet50, Mobilenet
 
 To contrast, we have also tested multiple other libraries on the same devices as baseline, including `Caffe + OpenBLAS`, `Caffe2 + Eigen` and `Caffe2 + NNPACK`.
 
-## FeatherCNN
-#### Huawei D05 Server (64-core, dual sockets)
-
+## Huawei D05 Server (64-core, dual sockets)
+#### 1.1 FeatherCNN
 |Network| 1 | 2  |4  |8 | 16 | 32 | 64 | 
 |---|---:|---:|---:|---:|---:|---:|---|
 |[VGG16]        | 1333 | 697  | 385      | 218 |157   | 117  |  102  |
@@ -25,6 +24,31 @@ To contrast, we have also tested multiple other libraries on the same devices as
 |[squeezenet]   | 153  | 98   |	58       | 44  |  -   |  -   |   -   |
 |[mobilenet]    | 124  | 70   | 42	     | 36  | 34   |	52   |	76   |
 |[densenet-121] | 522  | 284   | 174     | 115 |  -   |  -   |   -   |
+
+#### 1.2 Caffe + OpenBLAS
+
+|Network| 1 | 2  |4  |8 | 16 | 32 | 64 |
+|---|---:|---:|---:|---:|---:|---:|---|
+|[VGG16]        | 23626	| 15127 |	8662 | 	6206 |	4776 |	4393 | 	4900 |
+|[GoogleNet] | 1028 | 929  | 861	 | 831 | 822 | 848  | 857 |
+|[Resnet-50]    | 728  | 490  |	347	 | 278 | 252 | 346  | 365 |
+|[squeezenet]   | 190  | 127  |	92   | 76  | 74  | 84   | 92  |
+|[mobilenet]    | 211  | 166  | 146  | 139 | 137 | 153  | 184 |
+|[densenet-121] | 865  | 593  | 438	 | 373 | 354 | 655  | 856 |
+
+#### 1.3 Caffe2 + Eigen 
+
+|Network| 1 | 2  |4  |8 | 16 | 32 | 64 |
+|---|---:|---:|---:|---:|---:|---:|---|
+|[VGG16]        | 3267 | 2173 |	1550	 | 1310|1385 | 	1323 |	1401 |
+|[GoogleNet]    | 351  | 347  |	267      | 306 | 894 | 	2422 | 3938  |
+|[Resnet-50]    | 869  | 549  |	374	 | 262 | 149 | 	355  | 724 |
+|[squeezenet]   | 91   | 65   |	55       | 87  | 221 |  628  | 723 |
+|[mobilenet]    | 174  | 139  | 110      | 90  | 110 | 	171  |	592 |
+|[densenet-121] | -  | -  | -	 |- | - | -  | - |
+
+
+
 
 #### RK3399 (2 big and 4 little cores, big.little architecture)
 
