@@ -28,26 +28,26 @@ To contrast, we have also tested multiple other libraries on the same devices as
 
 #### RK3399 (2 big and 4 little cores, big.little architecture)
 
-|Network| 1 | 2  |1  | 2 | 4 | all  |
-|---|---:|---:|---:|---:|---:|---|
-|[VGG16]        | 2268 | 1620 | 6122     |3422 | 2269  |  1932   |
-|[GoogleNet]    | 416  | 250  | 927      |524  |  333  |  294    |
-|[Resnet-50]    | 857  | 517  | 1834     | 1009|671    | 555     | 
-|[squeezenet]   | 236  | 144  |539       | 315 |  210  |  172    |
-|[mobilenet]    | 242 |  137  | 487	   | 271   | 165   |  153    |
-|[densenet-121] | 842  | 543  | 1854     | 1050 |  686 |  543    |
+|Network| 1 | 2  |1  | 2 | 4 | all  | Memory (MB) |
+|---|---:|---:|---:|---:|---:|---:|---|
+|[VGG16]        | 2268 | 1620 | 6122     |3422 | 2269  |  1932   |   904  |
+|[GoogleNet]    | 416  | 250  | 927      |524  |  333  |  294    |   168  |
+|[Resnet-50]    | 857  | 517  | 1834     | 1009|671    | 555     |   466  | 
+|[squeezenet]   | 236  | 144  |539       | 315 |  210  |  172    |   404  |
+|[mobilenet]    | 242 |  137  | 487	   | 271   | 165   |  153    |   176  |
+|[densenet-121] | 842  | 543  | 1854     | 1050 |  686 |  543    |   111  |
 
 
 #### Raspberry Pi 3 (4 cores)
 
-|Network| 1 | 2  | 4 | Memory (MB) |
-|---|---:|---:|---:|---|
-|[VGG16]        | -    | -    |  -       |   -  |
-|[GoogleNet]    | 1058 | 642  | 809      |   -  |
-|[Resnet-50]    | 2107 | 1255 | 1540     |   -  | 
-|[squeezenet]   | 630  | 396  | 459      |   -  |
-|[mobilenet]    | 451  |  275 | 206	     |   -  |
-|[densenet-121] | -    | -    | -        |   -  |
+|Network| 1 | 2  | 4 | 
+|---|---:|---:|---|
+|[VGG16]        | -    | -    |  -       |
+|[GoogleNet]    | 1058 | 642  | 809      |
+|[Resnet-50]    | 2107 | 1255 | 1540     |
+|[squeezenet]   | 630  | 396  | 459      |
+|[mobilenet]    | 451  |  275 | 206	     | 
+|[densenet-121] | -    | -    | -        |
 
 
 #### TX2 (2 big and 4 little cores, big.little architecture)
