@@ -34,7 +34,7 @@ To contrast, we have also tested multiple other libraries on the same devices as
 |[GoogleNet]    | 266  | 151  | 97       | 60  |  -   |  -   |  -    |
 |[Resnet-50]    | 573  | 356  | 187      | 117 | 104  | 65   | 194   |
 |[squeezenet]   | 153  | 98   |	58       | 44  |  -   |  -   |   -   |
-|[mobilenet]    | 124  | 70   | 42	 | 36  | 34   |	52   |	76   |
+|[mobilenet]    | 124  | 70   | 42	     | 36  | 34   |	52   |	76   |
 |[densenet-121] | 522  | 284   | 174     | 115 |  -   |  -   |   -   |
 
 #### RK3399 (2 big and 4 little cores, big.little architecture)
@@ -52,7 +52,7 @@ To contrast, we have also tested multiple other libraries on the same devices as
 #### Raspberry Pi 3 (4 cores)
 
 |Network| 1 | 2  | 4 | Memory (MB) |
-|---|---:|---:|---:|---:|---|
+|---|---:|---:|---:|---|
 |[VGG16]        | -    | -    |  -       |   -  |
 |[GoogleNet]    | 1058 | 642  | 809      |   -  |
 |[Resnet-50]    | 2107 | 1255 | 1540     |   -  | 
