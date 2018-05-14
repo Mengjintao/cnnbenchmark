@@ -4,9 +4,9 @@ We evaluate performance with VGG16, GoogleNet(Inception-V1), ResNet50, Mobilenet
 
 |Device|Processor|\#CPUs @ Clock Speed|CPU Arch.|Memory (ms)| OS | SOC Power|
 |---|---:|---:|---:|---:|---:|---|
-|Samsung Galaxy S8   | Snapdragon 835   | 4 @ 2.45Ghz + 4 @ 1.90GHz | Kryo       |  4GB   | Android 7.0  | ~5W   |  
-|Apple iPhone 7 plus | A10 Fusion       | 2 @ 2.34Ghz + 2 @ 1.05GHz | Hurricane  |  2GB   | iOS 11.1     | ~5W   |
-|Huawei D05 Server   |  Hi1616          | 2 * 32 @ 2.40GHz | Cortex-A72 |  256GB | Ubuntu 16.04 | >100W |
+|Samsung S8   | Snapdragon 835   | 4 @ 2.45Ghz + 4 @ 1.90GHz | Kryo       |  4GB   | Android 7.0  | ~5W   |  
+|Apple iPhone 7 | A10 Fusion       | 2 @ 2.34Ghz + 2 @ 1.05GHz | Hurricane  |  2GB   | iOS 11.1     | ~5W   |
+|Huawei D05 Server  |  Hi1616          | 2 * 32 @ 2.40GHz | Cortex-A72 |  256GB | Ubuntu 16.04 | >100W |
 |Phytium FT1500A/16  | FTC660           | 16 @ 1.50GHz | Earth      |  64GB  | Kylin 5.0    | 35W   |
 |Firefly-RK3399      | RK3399           | 2 @ 1.8Ghz + 4 @ 1.40GHz  | Cortex-A72 |  2GB   | Debian       | 6.05W |
 |Raspberry Pi 3      | Broadcom BCM2837  | 4 @ 1.2Ghz               | Cortex-A53 |  1GB   | Ubuntu 16.04 | ~5W   |
@@ -34,7 +34,7 @@ To contrast, we have also tested multiple other libraries on the same devices as
 |[GoogleNet]    | 416  | 250  | 927      |524  |  333  |  294    |
 |[Resnet-50]    | 857  | 517  | 1834     | 1009|671    | 555     | 
 |[squeezenet]   | 236  | 144  |539       | 315 |  210  |  172    |
-|[mobilenet]    | 242 |  137   | 487	   | 271  | 165  |  153    |
+|[mobilenet]    | 242 |  137  | 487	   | 271   | 165   |  153    |
 |[densenet-121] | 842  | 543  | 1854     | 1050 |  686 |  543    |
 
 
@@ -53,8 +53,8 @@ To contrast, we have also tested multiple other libraries on the same devices as
 #### TX2 (2 big and 4 little cores, big.little architecture)
 
 |Network| 1 | 2  |1  | 2 | 4 | all  |
-|---|---:|---:|---:|---:|---|---|
-|[VGG16]        | 1325 | 706  | 2540     |1507 | 1226  |  844  |
+|---|---:|---:|---:|---:|---:|---|
+|[VGG16]        | 1325 | 706  | 2540     |1507 | 1226  |  844  |
 |[GoogleNet]    | 274  | 146 | 366       |206  |  127  |  105  |
 |[Resnet-50]    | 480  | 266  | 759     | 417  |261    | 215   | 
 |[squeezenet]   | 88   | 115  |73       | 61   | 204   |  153  |
