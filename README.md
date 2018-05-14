@@ -62,6 +62,7 @@ To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Ser
 
 
 ## 2. RK3399 (2 big and 4 little cores, big.little architecture)
+#### 2.1 FeatherCNN
 
 |Network| 1 | 2  |1  | 2 | 4 | all  | Memory (MB) |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -72,8 +73,14 @@ To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Ser
 |[mobilenet]    | 242 |  137  | 487  | 271   | 165   |  153  |   176  |
 |[densenet-121] | 842  | 543  | 1854 | 1050 |  686 |  543    |   111  |
 
+#### 2.2 Caffe + OpenBLAS
+
+#### 2.3 Caffe2 + Eigen 
+
+#### 2.4 NCNN
 
 ## 3. Raspberry Pi 3 (4 A53 cores)
+#### 3.1 FeatherCNN
 
 |Network| 1 | 2  | 4 | 
 |---|---:|---:|---|
@@ -83,6 +90,12 @@ To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Ser
 |[squeezenet]   | 630  | 396  | 459      |
 |[mobilenet]    | 451  |  275 | 206	     | 
 |[densenet-121] | -    | -    | -        |
+
+#### 3.2 Caffe + OpenBLAS
+
+#### 3.3 Caffe2 + Eigen 
+
+#### 3.4 NCNN
 
 
 #### TX2 (2 big and 4 little cores, big.little architecture)
