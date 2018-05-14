@@ -21,11 +21,13 @@ To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Ser
 |Network| 1 | 2  |4  |8 | 16 | 32 | 64 | 
 |---|---:|---:|---:|---:|---:|---:|---|
 |[VGG16]        | 1333 | 697  | 385      | 218 |157   | 117  |  102  |
-|[GoogleNet]    | 266  | 151  | 97       | 60  |  -   |  -   |  -    |
+|[GoogleNet]    | 266  | 151  | 97       | 60  |  c   |  c   |  c    |
 |[Resnet-50]    | 573  | 356  | 187      | 117 | 104  | 65   | 194   |
-|[squeezenet]   | 153  | 98   |	58       | 44  |  -   |  -   |   -   |
+|[squeezenet]   | 153  | 98   |	58       | 44  |  c   |  c   |   c   |
 |[mobilenet]    | 124  | 70   | 42	 | 36  | 34   |	52   |	76   |
-|[densenet-121] | 522  | 284   | 174     | 115 |  -   |  -   |   -   |
+|[densenet-121] | 522  | 284   | 174     | 115 |  c   |  c   |   c   |
+
+'''c''' means FeatherCNN has crashed on this case. 
 
 #### 1.2 Caffe + OpenBLAS
 
