@@ -124,6 +124,9 @@ As ARM has a unique big.little archtecture for energy saving, to evaluate the ad
 |[densenet-121] | 1268 |694	  |760	     |1.74    |
 	
 
+## Apple iPhone 7 plus and Samsung S8
+   @bug1987 can you help us collect the data for iPhone 7 plus and Samsung S8 on NCNN, Caffe, and Caffe2
+
 
 
 
