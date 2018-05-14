@@ -11,7 +11,6 @@ We evaluate performance with VGG16, GoogleNet(Inception-V1), ResNet50, Mobilenet
 |Firefly-RK3399      | RK3399           | 2 @ 1.8Ghz + 4 @ 1.40GHz  | Cortex-A72 |  2GB   | Debian       | 6.05W |
 |Raspberry Pi 3      | Broadcom BCM2837  | 4 @ 1.2Ghz               | Cortex-A53 |  1GB   | Ubuntu 16.04 | ~5W   |
 
-
 To contrast, we have also tested multiple other libraries on the same devices as baseline, including `Caffe + OpenBLAS`, `Caffe2 + Eigen` and `Caffe2 + NNPACK`.
 
 ## 1. Huawei D05 Server (64-core, dual sockets)
@@ -27,7 +26,7 @@ To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Ser
 |[mobilenet]    | 124  | 70   | 42	 | 36  | 34   |	52   |	76   |
 |[densenet-121] | 522  | 284   | 174     | 115 |  c   |  c   |   c   |
 
-'''c''' means FeatherCNN has crashed on this case. 
+`c` means FeatherCNN has crashed on this case. 
 
 #### 1.2 Caffe + OpenBLAS
 
@@ -40,6 +39,8 @@ To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Ser
 |[mobilenet]    | 211  | 166  | 146  | 139 | 137 | 153  | 184 | -|
 |[densenet-121] | 865  | 593  | 438	 | 373 | 354 | 655  | 856 |  -|
 
+`speedup` is caculated with the minimum time usage of a given tool divided by the minimum time usage of FeatherCNN over all cores.
+
 #### 1.3 Caffe2 + Eigen 
 
 |Network| 1 | 2  |4  |8 | 16 | 32 | 64 | speedup | 
@@ -51,18 +52,18 @@ To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Ser
 |[mobilenet]    | 174  | 139  | 110      | 90  | 110 | 	171  |	592 |  - |
 |[densenet-121] | x    | x    | x        |x    |x   | x   | x   |    x|
 
-''' x ''' means caffe2+eigen can not successfully implement densenet-121 network. 
+` x ` means caffe2+eigen can not successfully implement densenet-121 network. 
 
 #### 1.4 NCNN
 
-|Network| 1 | 2  |4  |8 | 16 | 32 | 64 |
-|---|---:|---:|---:|---:|---:|---:|---|
-|[VGG16]        | 1252 | 691 | 375|207 | 177 | 146 |196 |
-|[GoogleNet]    | 320	 | 167 |102	|74	 |  67 |207	 | 290|
-|[Resnet-50]    | 1026 |562	 |318	|180 | 112 | 150 |413 |
-|[squeezenet]   | 199	 | 115 |65	|37	 |30	 |78	 |188 |
-|[mobilenet]    | 221	 |125	 |60 |37 |44	 | 165 |199 |
-|[densenet-121] | 825	 | 536 |238 |195 |137 | 163 |1304 |
+|Network| 1 | 2  |4  |8 | 16 | 32 | 64 |speedup | 
+|---|---:|---:|---:|---:|---:|---:|---:|---|
+|[VGG16]        | 1252 | 691 | 375|207 | 177 | 146 |196 | -|
+|[GoogleNet]    | 320	 | 167 |102	|74	 |  67 |207	 | 290| -|
+|[Resnet-50]    | 1026 |562	 |318	|180 | 112 | 150 |413 |  -|
+|[squeezenet]   | 199	 | 115 |65	|37	 |30	 |78	 |188 | -|
+|[mobilenet]    | 221	 |125	 |60 |37 |44	 | 165 |199 | -|
+|[densenet-121] | 825	 | 536 |238 |195 |137 | 163 |1304 |  -|
 
 
 ## 2. RK3399 (2 big and 4 little cores, big.little architecture)
