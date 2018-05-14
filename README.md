@@ -32,12 +32,12 @@ To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Ser
 
 |Network| 1 | 2  |4  |8 | 16 | 32 | 64 | speedup | 
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-|[VGG16]        | 3329 | 2227 |	1443 | 1108| 1137|2109  |	3721|  - |
-|[GoogleNet]    | 1028 | 929  | 861	 | 831 | 822 | 848  | 857 |  -|
-|[Resnet-50]    | 728  | 490  |	347	 | 278 | 252 | 346  | 365 | -|
-|[squeezenet]   | 190  | 127  |	92   | 76  | 74  | 84   | 92  | -|
-|[mobilenet]    | 211  | 166  | 146  | 139 | 137 | 153  | 184 | -|
-|[densenet-121] | 865  | 593  | 438	 | 373 | 354 | 655  | 856 |  -|
+|[VGG16]        | 3329 | 2227 |	1443 | 1108| 1137|2109  |   3721|  10.86 |
+|[GoogleNet]    | 1028 | 929  | 861	 | 831 | 822 | 848  | 857 |  13.7|
+|[Resnet-50]    | 728  | 490  |	347	 | 278 | 252 | 346  | 365 |  3.88|
+|[squeezenet]   | 190  | 127  |	92   | 76  | 74  | 84   | 92  |      1.68|
+|[mobilenet]    | 211  | 166  | 146  | 139 | 137 | 153  | 184 |     4.03 |
+|[densenet-121] | 865  | 593  | 438	 | 373 | 354 | 655  | 856 |  3.08|
 
 `speedup` is caculated with the minimum time usage of a given tool divided by the minimum time usage of FeatherCNN over all cores.
 
