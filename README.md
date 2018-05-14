@@ -81,8 +81,14 @@ As ARM has a unique big.little archtecture for energy saving, to evaluate the ad
 #### 2.3 Caffe2 + Eigen 
 
 #### 2.4 NCNN
-
-
+|Network| 1 | 2  |1  | 2 | 4 | all  | speedup |
+|---|---:|---:|---:|---:|---:|---:|---|
+|[VGG16]        | 2498 | 1976 | 5638 | 3465 |	2264 | 1627 | 0.84 |
+|[GoogleNet]    | 483	 | 277	|1429  |	762	| 433	 | 465	|1.11  |
+|[Resnet-50]    | 1784 | 974	| 6728 | 3489	| 1905 | 1403	|1.88  |
+|[squeezenet]   | 1323 |761	  | 5360 |2819	|1574	 | 1612	|1.4   |
+|[mobilenet]    | 335	 |192	  |1250	 |663	  | 378	 |330	  |2.41  |  
+|[densenet-121] | 403  |263	  |1130	 |598	  |373	 | 363	|1.82  | 
 
 
 ## 3. Raspberry Pi 3 (4 A53 cores)
