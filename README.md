@@ -2,6 +2,7 @@
 
 We evaluate performance with VGG16, GoogleNet(Inception-V1), ResNet50, Mobilenet, Squeezenet and densenet-121 respectively, on the following 5 devices: 
 
+
 |Device|Processor|\#CPUs @ Clock Speed|CPU Arch.|Memory (ms)| OS | SOC Power|
 |---|---:|---:|---:|---:|---|
 |Samsung Galaxy S8   | Snapdragon 835   | 4 @ 2.45Ghz + 4 @ 1.90GHz | Kryo       |  4GB   | Android 7.0  | ~5W   |  
@@ -18,6 +19,7 @@ To contrast, we have also tested multiple other libraries on the same devices as
 
 ## FeatherCNN
 #### Huawei D05 Server (64-core, dual sockets)
+
 |Network| 1 | 2  |4  |8 | 16 | 32 | 64 | 
 |---|---:|---:|---:|---:|---|
 |[VGG16]        | 1333 | 697  | 385      | 218 |157   | 117  |  102  |
@@ -28,6 +30,7 @@ To contrast, we have also tested multiple other libraries on the same devices as
 |[densenet-121] | 522  | 284   | 174     | 115 |  -   |  -   |   -   |
 
 #### RK3399 (2 big and 4 little cores, big.little architecture)
+
 |Network| 1 | 2  |1  | 2 | 4 | all  |
 |---|---:|---:|---:|---:|---|
 |[VGG16]        | 2268 | 1620 | 6122     |3422 | 2269  |  1932   |
@@ -39,6 +42,7 @@ To contrast, we have also tested multiple other libraries on the same devices as
 
 
 #### Raspberry Pi 3 (4 cores)
+
 |Network| 1 | 2  | 4 | Memory (MB) |
 |---|---:|---:|---:|---:|---|
 |[VGG16]        | -    | -    |  -       |   -  |
@@ -50,6 +54,7 @@ To contrast, we have also tested multiple other libraries on the same devices as
 
 
 #### TX2 (2 big and 4 little cores, big.little architecture)
+
 |Network| 1 | 2  |1  | 2 | 4 | all  |
 |---|---:|---:|---:|---:|---|
 |[VGG16]        | 1325 | 706  | 2540     |1507 | 1226  |  844  |
@@ -63,6 +68,7 @@ To contrast, we have also tested multiple other libraries on the same devices as
 
 
 #### Caffe + OpenBLAS
+
 |Network| 1 | 2  |4  |8 | 16 | 32 | 64 |
 |---|---:|---:|---:|---:|---|
 |[VGG16]        | 23626	| 15127 |	8662 | 	6206 |	4776 |	4393 | 	4900 |
