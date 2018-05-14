@@ -45,11 +45,11 @@ To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Ser
 
 |Network| 1 | 2  |4  |8 | 16 | 32 | 64 | speedup | 
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-|[VGG16]        | 3267 | 2173 |	1550	 | 1310|1385 | 	1323 |	1401 | - |
-|[GoogleNet]    | 351  | 347  |	267      | 306 | 894 | 	2422 | 3938  | -|
-|[Resnet-50]    | 869  | 549  |	374	 | 262 | 149 | 	355  | 724 |   -|
-|[squeezenet]   | 91   | 65   |	55       | 87  | 221 |  628  | 723 |   -|
-|[mobilenet]    | 174  | 139  | 110      | 90  | 110 | 	171  |	592 |  - |
+|[VGG16]        | 3267 | 2173 |	1550	 | 1310|1385 | 	1323 |	1401 | 12.84 |
+|[GoogleNet]    | 351  | 347  |	267      | 306 | 894 | 	2422 | 3938  |   4.45|
+|[Resnet-50]    | 869  | 549  |	374	 | 262 | 149 | 	355  | 724 |     2.29|
+|[squeezenet]   | 91   | 65   |	55       | 87  | 221 |  628  | 723 |     1.25|
+|[mobilenet]    | 174  | 139  | 110      | 90  | 110 | 	171  |	592 |    2.65|
 |[densenet-121] | x    | x    | x        |x    |x   | x   | x   |    x|
 
 ` x ` means caffe2+eigen can not successfully implement densenet-121 network. 
