@@ -14,7 +14,9 @@ We evaluate performance with VGG16, GoogleNet(Inception-V1), ResNet50, Mobilenet
 
 To contrast, we have also tested multiple other libraries on the same devices as baseline, including `Caffe + OpenBLAS`, `Caffe2 + Eigen` and `Caffe2 + NNPACK`.
 
-## Huawei D05 Server (64-core, dual sockets)
+## 1. Huawei D05 Server (64-core, dual sockets)
+To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Server is a domestically made many-core arm server with 64 arm A72 cores. All these 64 cores are inter-connected with a token-ring network.
+
 #### 1.1 FeatherCNN
 |Network| 1 | 2  |4  |8 | 16 | 32 | 64 | 
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -29,8 +31,8 @@ To contrast, we have also tested multiple other libraries on the same devices as
 
 |Network| 1 | 2  |4  |8 | 16 | 32 | 64 |
 |---|---:|---:|---:|---:|---:|---:|---|
-|[VGG16]        | 23626	| 15127 |	8662 | 	6206 |	4776 |	4393 | 	4900 |
-|[GoogleNet] | 1028 | 929  | 861	 | 831 | 822 | 848  | 857 |
+|[VGG16]        | 3329 | 2227 |	1443 | 1108| 1137|2109  |	3721| 
+|[GoogleNet]    | 1028 | 929  | 861	 | 831 | 822 | 848  | 857 |
 |[Resnet-50]    | 728  | 490  |	347	 | 278 | 252 | 346  | 365 |
 |[squeezenet]   | 190  | 127  |	92   | 76  | 74  | 84   | 92  |
 |[mobilenet]    | 211  | 166  | 146  | 139 | 137 | 153  | 184 |
@@ -47,10 +49,19 @@ To contrast, we have also tested multiple other libraries on the same devices as
 |[mobilenet]    | 174  | 139  | 110      | 90  | 110 | 	171  |	592 |
 |[densenet-121] | -  | -  | -	 |- | - | -  | - |
 
+#### 1.4 NCNN
+
+|Network| 1 | 2  |4  |8 | 16 | 32 | 64 |
+|---|---:|---:|---:|---:|---:|---:|---|
+|[VGG16]        | 3267 | 2173 |	1550	 | 1310|1385 | 	1323 |	1401 |
+|[GoogleNet]    | 351  | 347  |	267      | 306 | 894 | 	2422 | 3938  |
+|[Resnet-50]    | 869  | 549  |	374	 | 262 | 149 | 	355  | 724 |
+|[squeezenet]   | 91   | 65   |	55       | 87  | 221 |  628  | 723 |
+|[mobilenet]    | 174  | 139  | 110      | 90  | 110 | 	171  |	592 |
+|[densenet-121] | -  | -  | -	 |- | - | -  | - |
 
 
-
-#### RK3399 (2 big and 4 little cores, big.little architecture)
+## 2. RK3399 (2 big and 4 little cores, big.little architecture)
 
 |Network| 1 | 2  |1  | 2 | 4 | all  | Memory (MB) |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -62,7 +73,7 @@ To contrast, we have also tested multiple other libraries on the same devices as
 |[densenet-121] | 842  | 543  | 1854 | 1050 |  686 |  543    |   111  |
 
 
-#### Raspberry Pi 3 (4 cores)
+## 3. Raspberry Pi 3 (4 A53 cores)
 
 |Network| 1 | 2  | 4 | 
 |---|---:|---:|---|
@@ -85,29 +96,5 @@ To contrast, we have also tested multiple other libraries on the same devices as
 |[mobilenet]    | 156 |  87   | 211      | 116 | 68    |  56   |
 |[densenet-121] | -    | -    | -         | - |   -    |  -   |
 
-
-
-
-#### Caffe + OpenBLAS
-
-|Network| 1 | 2  |4  |8 | 16 | 32 | 64 |
-|---|---:|---:|---:|---:|---:|---:|---|
-|[VGG16]        | 23626	| 15127 |	8662 | 	6206 |	4776 |	4393 | 	4900 |
-|[GoogleNet] | 1028 | 929  | 861	 | 831 | 822 | 848  | 857 |
-|[Resnet-50]    | 728  | 490  |	347	 | 278 | 252 | 346  | 365 |
-|[squeezenet]   | 190  | 127  |	92   | 76  | 74  | 84   | 92  |
-|[mobilenet]    | 211  | 166  | 146  | 139 | 137 | 153  | 184 |
-|[densenet-121] | 865  | 593  | 438	 | 373 | 354 | 655  | 856 |
-
-#### Caffe2 + Eigen 
-
-|Network| 1 | 2  |4  |8 | 16 | 32 | 64 |
-|---|---:|---:|---:|---:|---:|---:|---|
-|[VGG16]        | 3267 | 2173 |	1550	 | 1310|1385 | 	1323 |	1401 |
-|[GoogleNet]    | 351  | 347  |	267      | 306 | 894 | 	2422 | 3938  |
-|[Resnet-50]    | 869  | 549  |	374	 | 262 | 149 | 	355  | 724 |
-|[squeezenet]   | 91   | 65   |	55       | 87  | 221 |  628  | 723 |
-|[mobilenet]    | 174  | 139  | 110      | 90  | 110 | 	171  |	592 |
-|[densenet-121] | -  | -  | -	 |- | - | -  | - |
 
 #### Caffe2 + NNPACK 
