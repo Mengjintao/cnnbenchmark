@@ -53,12 +53,12 @@ To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Ser
 
 |Network| 1 | 2  |4  |8 | 16 | 32 | 64 |
 |---|---:|---:|---:|---:|---:|---:|---|
-|[VGG16]        | 3267 | 2173 |	1550	 | 1310|1385 | 	1323 |	1401 |
-|[GoogleNet]    | 351  | 347  |	267      | 306 | 894 | 	2422 | 3938  |
-|[Resnet-50]    | 869  | 549  |	374	 | 262 | 149 | 	355  | 724 |
-|[squeezenet]   | 91   | 65   |	55       | 87  | 221 |  628  | 723 |
-|[mobilenet]    | 174  | 139  | 110      | 90  | 110 | 	171  |	592 |
-|[densenet-121] | -  | -  | -	 |- | - | -  | - |
+|[VGG16]        | 1252 | 691 | 375|207 | 177 | 146 |196 |
+|[GoogleNet]    | 320	 | 167 |102	|74	 |  67 |207	 | 290|
+|[Resnet-50]    | 1026 |562	 |318	|180 | 112 | 150 |413 |
+|[squeezenet]   | 199	 | 115 |65	|37	 |30	 |78	 |188 |
+|[mobilenet]    | 221	 |125	 |60 |37 |44	 | 165 |199 |
+|[densenet-121] | 825	 | 536 |238 |195 |137 | 163 |1304 |
 
 
 ## 2. RK3399 (2 big and 4 little cores, big.little architecture)
@@ -81,6 +81,9 @@ As ARM has a unique big.little archtecture for energy saving, to evaluate the ad
 #### 2.3 Caffe2 + Eigen 
 
 #### 2.4 NCNN
+
+
+
 
 ## 3. Raspberry Pi 3 (4 A53 cores)
 #### 3.1 FeatherCNN
