@@ -4,13 +4,15 @@ We evaluate performance with VGG16, GoogleNet(Inception-V1), ResNet50, Mobilenet
 
 
 |Device|Processor|\#CPUs @ Clock Speed|CPU Arch.|Memory (ms)| OS | SOC Power|
+
 |---|---:|---:|---:|---:|---|
+
 |Samsung Galaxy S8   | Snapdragon 835   | 4 @ 2.45Ghz + 4 @ 1.90GHz | Kryo       |  4GB   | Android 7.0  | ~5W   |  
 |Apple iPhone 7 plus | A10 Fusion       | 2 @ 2.34Ghz + 2 @ 1.05GHz | Hurricane  |  2GB   | iOS 11.1     | ~5W   |
 |Huawei D05 Server   |  Hi1616          | 2 * 32 @ 2.40GHz | Cortex-A72 |  256GB | Ubuntu 16.04 | >100W |
 |Phytium FT1500A/16  | FTC660           | 16 @ 1.50GHz | Earth      |  64GB  | Kylin 5.0    | 35W   |
 |Firefly-RK3399      | RK3399           | 2 @ 1.8Ghz + 4 @ 1.40GHz  | Cortex-A72 |  2GB   | Debian       | 6.05W |
-|Raspberry Pi 3      | ARM A53          | 4 @ 1.2Ghz                | Cortex-A53 |  1GB   | Ubuntu 16.04 | ?     |
+|Raspberry Pi 3      | ARM A53          | 4 @ 1.2Ghz                | Cortex-A53 |  1GB   | Ubuntu 16.04 | -     |
 
 
 To contrast, we have also tested multiple other libraries on the same devices as baseline, including `Caffe + OpenBLAS`, `Caffe2 + Eigen` and `Caffe2 + NNPACK`.
