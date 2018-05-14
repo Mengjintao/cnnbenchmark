@@ -58,12 +58,12 @@ To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Ser
 
 |Network| 1 | 2  |4  |8 | 16 | 32 | 64 |speedup | 
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-|[VGG16]        | 1252 | 691 | 375|207 | 177 | 146 |196 | -|
-|[GoogleNet]    | 320	 | 167 |102	|74	 |  67 |207	 | 290| -|
-|[Resnet-50]    | 1026 |562	 |318	|180 | 112 | 150 |413 |  -|
-|[squeezenet]   | 199	 | 115 |65	|37	 |30	 |78	 |188 | -|
-|[mobilenet]    | 221	 |125	 |60 |37 |44	 | 165 |199 | -|
-|[densenet-121] | 825	 | 536 |238 |195 |137 | 163 |1304 |  -|
+|[VGG16]        | 1252 | 691 | 375|207 | 177 | 146 |196 | 1.43 |
+|[GoogleNet]    | 320	 | 167 |102	|74	 |  67 |207	 | 290| 1.12 |
+|[Resnet-50]    | 1026 |562	 |318	|180 | 112 | 150 |413 |  1.72|
+|[squeezenet]   | 199	 | 115 |65	|37	 |30	 |78	 |188 | 0.68|
+|[mobilenet]    | 221	 |125	 |60 |37 |44	 | 165 |199 | 1.09|
+|[densenet-121] | 825	 | 536 |238 |195 |137 | 163 |1304 |  1.19|
 
 
 ## 2. RK3399 (2 big and 4 little cores, big.little architecture)
@@ -105,7 +105,7 @@ As ARM has a unique big.little archtecture for energy saving, to evaluate the ad
 |[GoogleNet]    | 1058 | 642  | 809      |
 |[Resnet-50]    | 2107 | 1255 | 1540     |
 |[squeezenet]   | 638  | 399  | 501      |
-|[mobilenet]    | 451  |  275 | 206	     | 
+|[mobilenet]    | 451  |  275 | 206	 | 
 |[densenet-121] | 630   | 396 | 459      |
 
 #### 3.2 Caffe + OpenBLAS
