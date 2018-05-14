@@ -29,7 +29,7 @@ To contrast, we have also tested multiple other libraries on the same devices as
 #### RK3399 (2 big and 4 little cores, big.little architecture)
 
 |Network| 1 | 2  |1  | 2 | 4 | all  |
-|---|---:|---:|---:|---:|---|
+|---|---:|---:|---:|---:|---:|---|
 |[VGG16]        | 2268 | 1620 | 6122     |3422 | 2269  |  1932   |
 |[GoogleNet]    | 416  | 250  | 927      |524  |  333  |  294    |
 |[Resnet-50]    | 857  | 517  | 1834     | 1009|671    | 555     | 
@@ -53,8 +53,8 @@ To contrast, we have also tested multiple other libraries on the same devices as
 #### TX2 (2 big and 4 little cores, big.little architecture)
 
 |Network| 1 | 2  |1  | 2 | 4 | all  |
-|---|---:|---:|---:|---:|---|
-|[VGG16]        | 1325 | 706  | 2540     |1507 | 1226  |  844  |
+|---|---:|---:|---:|---:|---|---|
+|[VGG16]        | 1325 | 706  | 2540     |1507 | 1226  |  844  |
 |[GoogleNet]    | 274  | 146 | 366       |206  |  127  |  105  |
 |[Resnet-50]    | 480  | 266  | 759     | 417  |261    | 215   | 
 |[squeezenet]   | 88   | 115  |73       | 61   | 204   |  153  |
@@ -67,7 +67,7 @@ To contrast, we have also tested multiple other libraries on the same devices as
 #### Caffe + OpenBLAS
 
 |Network| 1 | 2  |4  |8 | 16 | 32 | 64 |
-|---|---:|---:|---:|---:|---|
+|---|---:|---:|---:|---:|---:|---:|---|
 |[VGG16]        | 23626	| 15127 |	8662 | 	6206 |	4776 |	4393 | 	4900 |
 |[GoogleNet] | 1028 | 929  | 861	 | 831 | 822 | 848  | 857 |
 |[Resnet-50]    | 728  | 490  |	347	 | 278 | 252 | 346  | 365 |
@@ -78,7 +78,7 @@ To contrast, we have also tested multiple other libraries on the same devices as
 #### Caffe2 + Eigen 
 
 |Network| 1 | 2  |4  |8 | 16 | 32 | 64 |
-|---|---:|---:|---:|---:|---|
+|---|---:|---:|---:|---:|---:|---:|---|
 |[VGG16]        | 3267 | 2173 |	1550	 | 1310|1385 | 	1323 |	1401 |
 |[GoogleNet]    | 351  | 347  |	267      | 306 | 894 | 	2422 | 3938  |
 |[Resnet-50]    | 869  | 549  |	374	 | 262 | 149 | 	355  | 724 |
