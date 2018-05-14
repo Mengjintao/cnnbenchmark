@@ -86,9 +86,9 @@ As ARM has a unique big.little archtecture for energy saving, to evaluate the ad
 |[VGG16]        | 2498 | 1976 | 5638 | 3465 |	2264 | 1627 | 0.84 |
 |[GoogleNet]    | 483	 | 277	|1429  |	762	| 433	 | 465	|1.11  |
 |[Resnet-50]    | 1784 | 974	| 6728 | 3489	| 1905 | 1403	|1.88  |
-|[squeezenet]   | 1323 |761	  | 5360 |2819	|1574	 | 1612	|1.4   |
+|[squeezenet]   | 403  |263	  |1130	 |598	  |373	 | 363	|1.82  | 
 |[mobilenet]    | 335	 |192	  |1250	 |663	  | 378	 |330	  |2.41  |  
-|[densenet-121] | 403  |263	  |1130	 |598	  |373	 | 363	|1.82  | 
+|[densenet-121] | 1323 |761	  | 5360 |2819	|1574	 | 1612	|1.4   |
 
 
 ## 3. Raspberry Pi 3 (4 A53 cores)
@@ -99,15 +99,27 @@ As ARM has a unique big.little archtecture for energy saving, to evaluate the ad
 |[VGG16]        | -    | -    |  -       |
 |[GoogleNet]    | 1058 | 642  | 809      |
 |[Resnet-50]    | 2107 | 1255 | 1540     |
-|[squeezenet]   | 630  | 396  | 459      |
+|[squeezenet]   | 638  | 399  | 501      |
 |[mobilenet]    | 451  |  275 | 206	     | 
-|[densenet-121] | -    | -    | -        |
+|[densenet-121] | 630   | 396 | 459      |
 
 #### 3.2 Caffe + OpenBLAS
 
 #### 3.3 Caffe2 + Eigen 
 
 #### 3.4 NCNN
+
+|Network| 1 | 2  | 4 |  speedup | 
+|---|---:|---:|---:|---|
+|[VGG16]        | -    | -    |  -       |   -   |
+|[GoogleNet]    | 1896 | 1018	| 1130	   |  1.58  | 
+|[Resnet-50]    | 8386 |4392	|3987	     |3.17    |
+|[squeezenet]   | 1268 |694	  |760	     |1.74    |
+|[mobilenet]    | 1758 |951	  |570	     |2.7     |
+|[densenet-121] | 1268 |694	  |760	     |1.74    |
+	
+
+
 
 
 #### TX2 (2 big and 4 little cores, big.little architecture)
