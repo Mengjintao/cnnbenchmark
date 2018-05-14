@@ -2,11 +2,22 @@
 
 We evaluate performance with VGG16, GoogleNet(Inception-V1), ResNet50, Mobilenet, Squeezenet and densenet-121 respectively, on the following 5 devices: 
 
+|Network|Layers|Top-1 error|Top-5 error|Speed (ms)|Citation|
+|---|---:|---:|---:|---:|---|
+|[AlexNet](#alexnet)|8|42.90|19.80|14.56|[[1]](#alexnet-paper)|
+|[Inception-V1](#inception-v1)|22|-|10.07|39.14|[[2]](#inception-v1-paper)|
+|[VGG-16](#vgg-16)|16|27.00|8.80|128.62|[[3]](#vgg-paper)|
+|[VGG-19](#vgg-19)|19|27.30|9.00|147.32|[[3]](#vgg-paper)|
+|[ResNet-18](#resnet-18)|18|30.43|10.76|31.54|[[4]](#resnet-cvpr)|
+|[ResNet-34](#resnet-34)|34|26.73|8.74|51.59|[[4]](#resnet-cvpr)|
+|[ResNet-50](#resnet-50)|50|24.01|7.02|103.58|[[4]](#resnet-cvpr)|
+|[ResNet-101](#resnet-101)|101|22.44|6.21|156.44|[[4]](#resnet-cvpr)|
+|[ResNet-152](#resnet-152)|152|22.16|6.16|217.91|[[4]](#resnet-cvpr)|
+|[ResNet-200](#resnet-200)|200|21.66|5.79|296.51|[[5]](#resnet-eccv)|
+
 
 |Device|Processor|\#CPUs @ Clock Speed|CPU Arch.|Memory (ms)| OS | SOC Power|
-
 |---|---:|---:|---:|---:|---|
-
 |Samsung Galaxy S8   | Snapdragon 835   | 4 @ 2.45Ghz + 4 @ 1.90GHz | Kryo       |  4GB   | Android 7.0  | ~5W   |  
 |Apple iPhone 7 plus | A10 Fusion       | 2 @ 2.34Ghz + 2 @ 1.05GHz | Hurricane  |  2GB   | iOS 11.1     | ~5W   |
 |Huawei D05 Server   |  Hi1616          | 2 * 32 @ 2.40GHz | Cortex-A72 |  256GB | Ubuntu 16.04 | >100W |
@@ -16,8 +27,6 @@ We evaluate performance with VGG16, GoogleNet(Inception-V1), ResNet50, Mobilenet
 
 
 To contrast, we have also tested multiple other libraries on the same devices as baseline, including `Caffe + OpenBLAS`, `Caffe2 + Eigen` and `Caffe2 + NNPACK`.
-
-
 
 ## FeatherCNN
 #### Huawei D05 Server (64-core, dual sockets)
