@@ -24,12 +24,12 @@ To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Ser
 |[GoogleNet]    | 266  | 151  | 97       | 60  |  -   |  -   |  -    |
 |[Resnet-50]    | 573  | 356  | 187      | 117 | 104  | 65   | 194   |
 |[squeezenet]   | 153  | 98   |	58       | 44  |  -   |  -   |   -   |
-|[mobilenet]    | 124  | 70   | 42	     | 36  | 34   |	52   |	76   |
+|[mobilenet]    | 124  | 70   | 42	 | 36  | 34   |	52   |	76   |
 |[densenet-121] | 522  | 284   | 174     | 115 |  -   |  -   |   -   |
 
 #### 1.2 Caffe + OpenBLAS
 
-|Network| 1 | 2  |4  |8 | 16 | 32 | 64 |
+|Network| 1 | 2  |4  |8 | 16 | 32 | 64 | speedup | 
 |---|---:|---:|---:|---:|---:|---:|---|
 |[VGG16]        | 3329 | 2227 |	1443 | 1108| 1137|2109  |	3721| 
 |[GoogleNet]    | 1028 | 929  | 861	 | 831 | 822 | 848  | 857 |
@@ -47,7 +47,9 @@ To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Ser
 |[Resnet-50]    | 869  | 549  |	374	 | 262 | 149 | 	355  | 724 |
 |[squeezenet]   | 91   | 65   |	55       | 87  | 221 |  628  | 723 |
 |[mobilenet]    | 174  | 139  | 110      | 90  | 110 | 	171  |	592 |
-|[densenet-121] | -  | -  | -	 |- | - | -  | - |
+|[densenet-121] | X    | X    | X        |X    | X   | X   | X     |
+
+''' X ''' means caffe2+eigen can not successfully implement densenet-121 network. 
 
 #### 1.4 NCNN
 
