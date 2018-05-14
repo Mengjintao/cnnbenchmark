@@ -62,6 +62,9 @@ To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Ser
 
 
 ## 2. RK3399 (2 big and 4 little cores, big.little architecture)
+
+As ARM has a unique big.little archtecture for energy saving, to evaluate the adaptation of schduling algortihm and blocking strategies with this big.little archtecture, RK3399 is selected as an widely used embeded developing board for testing. RK3399 has 2 big cores with 1.8GHz, and 4 little cores with 1.4GHz. 
+
 #### 2.1 FeatherCNN
 
 |Network| 1 | 2  |1  | 2 | 4 | all  | Memory (MB) |
