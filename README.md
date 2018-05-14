@@ -16,9 +16,9 @@ We evaluate performance with VGG16, GoogleNet(Inception-V1), ResNet50, Mobilenet
 |[ResNet-200](#resnet-200)|200|21.66|5.79|296.51|[[5]](#resnet-eccv)|
 
 
-|Network|Layers|Top-1 error|Top-5 error|Speed (ms)|Citation|
-|---|---:|---:|---:|---:|---|
-|AlexNet|8|42.90|19.80|14.56|1|
+|Network|1|2|4|8|16|32|64| 
+|---|---:|---:|---:|---:|---:|---:|---|
+|VGG16|1333|697|385|218|157|117|102|
 
 |Network|1|2|4|8|16|32|64| 
 |---|---:|---:|---:|---:|---|
