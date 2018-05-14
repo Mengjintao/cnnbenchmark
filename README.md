@@ -6,14 +6,25 @@ We evaluate performance with VGG16, GoogleNet(Inception-V1), ResNet50, Mobilenet
 |---|---:|---:|---:|---:|---|
 |[AlexNet](#alexnet)|8|42.90|19.80|14.56|[[1]](#alexnet-paper)|
 |[Inception-V1](#inception-v1)|22|-|10.07|39.14|[[2]](#inception-v1-paper)|
-|[VGG-16](#vgg-16)|16|27.00|8.80|128.62|[[3]](#vgg-paper)|
-|[VGG-19](#vgg-19)|19|27.30|9.00|147.32|[[3]](#vgg-paper)|
+|[VGG-16](#vgg-16)      |16|27.00|8.80|128.62|[[3]](#vgg-paper)|
+|[VGG-19](#vgg-19)      |19|27.30|9.00|147.32|[[3]](#vgg-paper)|
 |[ResNet-18](#resnet-18)|18|30.43|10.76|31.54|[[4]](#resnet-cvpr)|
 |[ResNet-34](#resnet-34)|34|26.73|8.74|51.59|[[4]](#resnet-cvpr)|
 |[ResNet-50](#resnet-50)|50|24.01|7.02|103.58|[[4]](#resnet-cvpr)|
 |[ResNet-101](#resnet-101)|101|22.44|6.21|156.44|[[4]](#resnet-cvpr)|
 |[ResNet-152](#resnet-152)|152|22.16|6.16|217.91|[[4]](#resnet-cvpr)|
 |[ResNet-200](#resnet-200)|200|21.66|5.79|296.51|[[5]](#resnet-eccv)|
+
+
+|Network| 1 | 2  |4  |8 | 16 | 32 | 64 | 
+|---|---:|---:|---:|---:|---|
+|VGG16        | 1333 | 697  | 385      | 218 |157   | 117  |  102  |
+|GoogleNet    | 266  | 151  | 97       | 60  |  -   |  -   |  -    |
+|Resnet-50    | 573  | 356  | 187      | 117 | 104  | 65   | 194   |
+|squeezenet   | 153  | 98   |	58       | 44  |  -   |  -   |   -   |
+|mobilenet    | 124  | 70   | 42	 | 36  | 34   |	52   |	76   |
+|densenet-121 | 522  | 284   | 174     | 115 |  -   |  -   |   -   |
+
 
 
 |Device|Processor|\#CPUs @ Clock Speed|CPU Arch.|Memory (ms)| OS | SOC Power|
