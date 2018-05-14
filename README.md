@@ -2,17 +2,6 @@
 
 We evaluate performance with VGG16, GoogleNet(Inception-V1), ResNet50, Mobilenet, Squeezenet and densenet-121 respectively, on the following 5 devices: 
 
-|Network|1|2|4|8|16|32|64| 
-|---|---:|---:|---:|---:|---:|---:|---|
-|VGG16|1333|697|385|218|157|117|102|
-|GoogleNet|266|151|97|60|-|-|-|
-|Resnet-50|573|356|187|117|104|65|194|
-|squeezenet|153|98|58|44|-|-|-|
-|mobilenet|124|70|42|36|34|52|76|
-|densenet-121|522|284|174|115|-|-|-|
-
-
-
 |Device|Processor|\#CPUs @ Clock Speed|CPU Arch.|Memory (ms)| OS | SOC Power|
 |---|---:|---:|---:|---:|---:|---|
 |Samsung Galaxy S8   | Snapdragon 835   | 4 @ 2.45Ghz + 4 @ 1.90GHz | Kryo       |  4GB   | Android 7.0  | ~5W   |  
