@@ -29,12 +29,12 @@ To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Ser
 #### 1.1 FeatherCNN-F(6x6,3x3)
 |Network| 1 | 2  |4  |8 | 16 | 32 | 64 | 
 |---|---:|---:|---:|---:|---:|---:|---|
-|[VGG16]        | 1333 | 697  | 385      | 218 |157   | 117  |  102  |
-|[GoogleNet]    | 333	| 210 | 154	 |125  |126   |151   | 230   |
-|[Resnet-50]    | 573  | 356  | 187      | 117 | 104  | 65   | 194   |
-|[squeezenet]   | 149  |79    |	44       |28	|29   |35    | 67    |
-|[mobilenet]    | 124  | 70   | 42	 | 36  | 34   |	52   |	76   |
-|[densenet-121] | 517  |273   | 156      |98   | 113  | 160  | 331   |
+|[VGG16]        | - | -  | -      | - |-   | -  |  -  |
+|[GoogleNet]    | - | -  | -      | - |-   | -  |  -  |
+|[Resnet-50]    | - | -  | -      | - |-   | -  |  -  |
+|[squeezenet]   | - | -  | -      | - |-   | -  |  -  |
+|[mobilenet]    | - | -  | -      | - |-   | -  |  -  |
+|[densenet-121] | - | -  | -      | - |-   | -  |  -  |
 
 `c` means FeatherCNN has crashed on this case. 
 
