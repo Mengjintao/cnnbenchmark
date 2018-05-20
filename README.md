@@ -16,7 +16,7 @@ To contrast, we have also tested multiple other libraries on the same devices as
 ## 1. Huawei D05 Server (64-core, dual sockets)
 To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Server is a domestically made many-core arm server with 64 arm A72 cores. All these 64 cores are inter-connected with a token-ring network.
 
-#### 1.1 FeatherCNN
+#### 1.1 FeatherCNN-F(2x2,3x3)
 |Network| 1 | 2  |4  |8 | 16 | 32 | 64 | 
 |---|---:|---:|---:|---:|---:|---:|---|
 |[VGG16]        | 1333 | 697  | 385      | 218 |157   | 117  |  102  |
