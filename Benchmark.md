@@ -36,51 +36,11 @@ To evaluated the scalabiltiy of state-of-art CNN inference tools, Huawei D05 Ser
 |[mobilenet]    | - | -  | -      | - |-   | -  |  -  |
 |[densenet-121] | - | -  | -      | - |-   | -  |  -  |
 
-`c` means FeatherCNN has crashed on this case. 
-
-#### 1.2 Caffe + OpenBLAS
-
-|Network| 1 | 2  |4  |8 | 16 | 32 | 64 | speedup | 
-|---|---:|---:|---:|---:|---:|---:|---:|---|
-|[VGG16]        | 3329 | 2227 |	1443 | 1108| 1137|2109  |   3721|  10.86 |
-|[GoogleNet]    | 1028 | 929  | 861	 | 831 | 822 | 848  | 857 |  13.7|
-|[Resnet-50]    | 728  | 490  |	347	 | 278 | 252 | 346  | 365 |  3.88|
-|[squeezenet]   | 190  | 127  |	92   | 76  | 74  | 84   | 92  |      1.68|
-|[mobilenet]    | 211  | 166  | 146  | 139 | 137 | 153  | 184 |     4.03 |
-|[densenet-121] | 865  | 593  | 438	 | 373 | 354 | 655  | 856 |  3.08|
-
-`speedup` is caculated with the minimum time usage of the given tool divided by the minimum time usage of FeatherCNN over all cores.
-
-#### 1.3 Caffe2 + Eigen 
-
-|Network| 1 | 2  |4  |8 | 16 | 32 | 64 | speedup | 
-|---|---:|---:|---:|---:|---:|---:|---:|---|
-|[VGG16]        | 3267 | 2173 |	1550	 | 1310|1385 | 	1323 |	1401 | 12.84 |
-|[GoogleNet]    | 351  | 347  |	267      | 306 | 894 | 	2422 | 3938  |   4.45|
-|[Resnet-50]    | 869  | 549  |	374	 | 262 | 149 | 	355  | 724 |     2.29|
-|[squeezenet]   | 91   | 65   |	55       | 87  | 221 |  628  | 723 |     1.25|
-|[mobilenet]    | 174  | 139  | 110      | 90  | 110 | 	171  |	592 |    2.65|
-|[densenet-121] | x    | x    | x        |x    |x   | x   | x   |    x|
-
-` x ` means caffe2+eigen can not successfully implement densenet-121 network. 
-
-#### 1.4 NCNN
-
-|Network| 1 | 2  |4  |8 | 16 | 32 | 64 |speedup | 
-|---|---:|---:|---:|---:|---:|---:|---:|---|
-|[VGG16]        | 1252 | 691 | 375|207 | 177 | 146 |196 | 1.43 |
-|[GoogleNet]    | 320	 | 167 |102	|74	 |  67 |207	 | 290| 1.12 |
-|[Resnet-50]    | 1026 |562	 |318	|180 | 112 | 150 |413 |  1.72|
-|[squeezenet]   | 199	 | 115 |65	|37	 |30	 |78	 |188 | 0.68|
-|[mobilenet]    | 221	 |125	 |60 |37 |44	 | 165 |199 | 1.09|
-|[densenet-121] | 825	 | 536 |238 |195 |137 | 163 |1304 |  1.19|
-
-
 ## 2. RK3399 (2 big and 4 little cores, big.little architecture)
 
 As ARM has a unique big.little archtecture for energy saving, to evaluate the adaptation of schduling algortihm and blocking strategies with this big.little archtecture, RK3399 is selected as an widely used embeded developing board for testing. RK3399 has 2 big cores with 1.8GHz, and 4 little cores with 1.4GHz. 
 
-#### 2.1 FeatherCNN
+#### 2.1 FeatherCNN-F(2x2,3x3)
 
 |Network| 1 | 2  |1  | 2 | 4 | all  | Memory (MB) |
 |---|---:|---:|---:|---:|---:|---:|---|
@@ -91,23 +51,9 @@ As ARM has a unique big.little archtecture for energy saving, to evaluate the ad
 |[mobilenet]    | 242 |  137  | 487  | 271   | 165   |  153  |   176  |
 |[densenet-121] | 842  | 543  | 1854 | 1050 |  686 |  543    |   111  |
 
-#### 2.2 Caffe + OpenBLAS
-
-#### 2.3 Caffe2 + Eigen 
-
-#### 2.4 NCNN
-|Network| 1 | 2  |1  | 2 | 4 | all  | speedup |
-|---|---:|---:|---:|---:|---:|---:|---|
-|[VGG16]        | 2498 | 1976 | 5638 | 3465 |	2264 | 1627 | 1.22 |
-|[GoogleNet]    | 483	 | 277	|1429  |  762	| 433	 | 465	|1.11  |
-|[Resnet-50]    | 1784 | 974	| 6728 | 3489	| 1905 | 1403	|1.88  |
-|[squeezenet]   | 403  |263	  |1130	 |598	  |373	 | 363	|1.82  | 
-|[mobilenet]    | 335	 |192	  |1250	 |663	  | 378	 |330	  |2.41  |  
-|[densenet-121] | 1323 |761	  | 5360 |2819	|1574	 | 1612	|1.4   |
-
 
 ## 3. Raspberry Pi 3 (4 A53 cores)
-#### 3.1 FeatherCNN
+#### 3.1 FeatherCNN-F(2x2,3x3)
 
 |Network| 1 | 2  | 4 | 
 |---|---:|---:|---|
@@ -118,21 +64,6 @@ As ARM has a unique big.little archtecture for energy saving, to evaluate the ad
 |[mobilenet]    | 451  |  275 | 206	 | 
 |[densenet-121] | 630   | 396 | 459      |
 
-#### 3.2 Caffe + OpenBLAS
-
-#### 3.3 Caffe2 + Eigen 
-
-#### 3.4 NCNN
-
-|Network| 1 | 2  | 4 |  speedup | 
-|---|---:|---:|---:|---|
-|[VGG16]        | -    | -    |  -       |   -   |
-|[GoogleNet]    | 1896 | 1018	| 1130	   |  1.58  | 
-|[Resnet-50]    | 8386 |4392	|3987	     |3.17    |
-|[squeezenet]   | 1268 |694	  |760	     |1.74    |
-|[mobilenet]    | 1758 |951	  |570	     |2.7     |
-|[densenet-121] | 1268 |694	  |760	     |1.74    |
-	
 
 ## Apple iPhone 7 plus and Samsung S8
    @bug1987 can you help us collect the data for iPhone 7 plus and Samsung S8 on NCNN, Caffe, and Caffe2
