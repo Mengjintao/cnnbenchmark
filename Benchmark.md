@@ -10,7 +10,7 @@ We evaluate performance with VGG16, GoogleNet(Inception-V1), ResNet50, Mobilenet
 |Phytium FT1500A/16  | FTC660           | 16 @ 1.50GHz | Earth      |  64GB  | Kylin 5.0    | 35W   |
 |Firefly-RK3399      | RK3399           | 2 @ 1.8Ghz + 4 @ 1.40GHz  | Cortex-A72 |  2GB   | Debian       | 6.05W |
 |Raspberry Pi 3      | Broadcom BCM2837  | 4 @ 1.2Ghz               | Cortex-A53 |  1GB   | Ubuntu 16.04 | ~5W   |
-|Huawei Mate10       |  Kirin 970        | 4A73 @ 2.34Ghz + 4 A53@ 1.05GHz      | Cortex-A73/A53 |  4GB  | Ubuntu 16.04 | ~5W  |
+|Huawei Mate10       |  Kirin 970        | 4A73 @ 2.4Ghz + 4 A53@ 1.8GHz      | Cortex-A73/A53 |  4GB  | Ubuntu 16.04 | ~5W  |
 
 
 To contrast, we have also tested multiple other libraries on the same devices as baseline, including `Caffe + OpenBLAS`, `Caffe2 + Eigen` and `Caffe2 + NNPACK`.
